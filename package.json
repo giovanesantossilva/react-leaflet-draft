@@ -1,0 +1,73 @@
+{
+    "name": "react-leaflet-draft",
+    "version": "1.0.1",
+    "private": false,
+    "description": "A modern study React component of leaflet draw for react-leaflet",
+    "author": "Giovane Santos <giovanesantos1999@gmail.com>",
+    "license": "ISC",
+    "main": "dist/index.min.js",
+    "types": "src/Draft/index.d.ts",
+    "scripts": {
+        "test": "jest",
+        "size": "du -hs dist/",
+        "clean": "rm -rf dist",
+        "start": "webpack serve --progress",
+        "build:babel": "babel src --out-dir dist",
+        "build:terser": "terser ./dist/Draft/index.js -o ./dist/index.min.js",
+        "build:clean": "rm -r ./dist/Draft",
+        "build": "yarn clean && yarn build:babel && yarn build:terser && yarn build:clean"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/giovanesantossilva/react-leaflet-draft.git"
+    },
+    "bugs": {
+        "url": "https://github.com/giovanesantossilva/react-leaflet-draft/issues"
+    },
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md",
+        "src/Draft/index.d.ts"
+    ],
+    "keywords": [
+        "react",
+        "react-leaflet",
+        "leaflet",
+        "draw",
+        "draft",
+        "editor"
+    ],
+    "peerDependencies": {
+        "leaflet": "^1.6.0",
+        "leaflet-draw": "^1.0.0",
+        "react-leaflet": "^3.0.0"
+    },
+    "dependencies": {
+        "@react-leaflet/core": "^1.1.1",
+        "leaflet": "^1.7.1",
+        "leaflet-draw": "^1.0.4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-leaflet": "^3.2.5"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.17.0",
+        "@babel/core": "^7.17.2",
+        "@babel/preset-env": "^7.16.11",
+        "@babel/preset-react": "^7.16.7",
+        "@testing-library/jest-dom": "^5.16.2",
+        "@testing-library/react": "^12.1.2",
+        "babel-jest": "^27.5.1",
+        "babel-loader": "^8.2.3",
+        "css-loader": "^6.6.0",
+        "html-webpack-plugin": "^5.5.0",
+        "jest": "^27.5.1",
+        "jest-dom": "^4.0.0",
+        "style-loader": "^3.3.1",
+        "terser": "^5.10.0",
+        "webpack": "^5.68.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.7.4"
+    }
+}
