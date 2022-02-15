@@ -1,6 +1,6 @@
 {
     "name": "react-leaflet-draft",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "private": false,
     "description": "A modern study React component of leaflet draw for react-leaflet",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",
@@ -13,9 +13,10 @@
         "clean": "rm -rf dist",
         "start": "webpack serve --progress",
         "build:babel": "babel src --out-dir dist",
-        "build:terser": "terser ./dist/Draft/index.js -o ./dist/index.min.js",
+        "build:terser": "terser ./dist/Draft/index.js -c -m -o ./dist/index.min.js",
+        "build:terser:factory": "terser ./dist/Draft/factory.js -c -m -o ./dist/factory.js",
         "build:clean": "rm -r ./dist/Draft",
-        "build": "yarn clean && yarn build:babel && yarn build:terser && yarn build:clean"
+        "build": "yarn clean && yarn build:babel && yarn build:terser && yarn build:terser:factory && yarn build:clean"
     },
     "repository": {
         "type": "git",
