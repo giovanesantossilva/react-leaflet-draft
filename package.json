@@ -1,6 +1,6 @@
 {
     "name": "react-leaflet-draft",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "private": false,
     "description": "A modern study React component of leaflet draw for react-leaflet",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",

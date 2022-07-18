@@ -7,10 +7,10 @@ import "leaflet-draw/dist/leaflet.draw.css";
 
 import { createControlDraw } from './factory';
 
-export const DraftControl = React.memo(createControlComponent((props) => {
+export const DraftControl = React.memo(createControlComponent(function(props) {
     const context = useLeafletContext();
 
-    function onDrawCreated(event) {
+    const onDrawCreated = React.useCallback(function(event) {
         const { onCreated, limitLayers } = props;
         const container = context.layerContainer || context.map;
         const eventLayers = event.layer;
@@ -23,16 +23,20 @@ export const DraftControl = React.memo(createControlComponent((props) => {
 
         container.addLayer(eventLayers);
         onCreated && onCreated(event);
-    }
+    }, []);
 
-    Object.entries(props).forEach(([propName, propValue]) => {
-        if(propName.startsWith('on') && propName !== "onCreated") {
-            const event = `draw:${propName.substring(2).toLowerCase()}`;
-            context.map.on(event, propValue);
-        }
-    });
+    React.useEffect(function() {
+        Object.entries(props).forEach(([propName, propValue]) => {
+            if(propName.startsWith('on') && propName !== "onCreated") {
+                const event = `draw:${propName.substring(2).toLowerCase()}`;
+                context.map.on(event, propValue);
+            }
+        });
+    }, []);
 
-    context.map.on(L.Draw.Event.CREATED, onDrawCreated);
+    React.useEffect(function() {
+        context.map.on(L.Draw.Event.CREATED, onDrawCreated);
+    }, []);
 
     return createControlDraw(props, context);
 }));
