@@ -15,22 +15,22 @@ type DrawProps = {
 }
 
 interface LeafletDrawListeners {
-    onCreated: Function,
-    onEdited: Function,
-    onDeleted: Function,
-    onDrawStart: Function,
-    onDrawStop: Function,
-    onDrawVertex: Function,
-    onEditStart: Function,
-    onEditMove: Function,
-    onEditResize: Function,
-    onEditVertex: Function,
-    onEditStop: Function,
-    onDeleteStart: Function,
-    onDeleteStop: Function,
-    onToolbarOpened: Function,
-    onToolbarClosed: Function,
-    onMarkerContext: Function
+    onCreated?: Function,
+    onEdited?: Function,
+    onDeleted?: Function,
+    onDrawStart?: Function,
+    onDrawStop?: Function,
+    onDrawVertex?: Function,
+    onEditStart?: Function,
+    onEditMove?: Function,
+    onEditResize?: Function,
+    onEditVertex?: Function,
+    onEditStop?: Function,
+    onDeleteStart?: Function,
+    onDeleteStop?: Function,
+    onToolbarOpened?: Function,
+    onToolbarClosed?: Function,
+    onMarkerContext?: Function
 }
 
 export interface DraftControlProps extends LeafletDrawListeners {
