@@ -14,6 +14,10 @@ type DrawProps = {
     circlemarker: boolean | object
 }
 
+type TranslateProps = {
+    toolbar: object
+}
+
 interface LeafletDrawListeners {
     onCreated: Function,
     onEdited: Function,
@@ -37,7 +41,8 @@ export interface DraftControlProps extends LeafletDrawListeners {
     position: string,
     edit: EditProps,
     draw: DrawProps,
-    limitLayers: number
+    limitLayers: number,
+    translate?: TranslateProps
 }
 
 export class DraftControl extends React.Component<DraftControlProps> {}

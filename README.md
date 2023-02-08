@@ -83,6 +83,13 @@ You can see the properties in [Leaflet-draw Documentation](http://leaflet.github
     edit={{
         edit: false
     }}
+    translate={{
+        toolbar: {
+            buttons: {
+                circle: 'Circle'
+            }
+        }
+    }}
     limitLayers={2}
 />
 ```
