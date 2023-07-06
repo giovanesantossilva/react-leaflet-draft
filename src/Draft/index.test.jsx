@@ -15,7 +15,7 @@ describe('MarkerMuster Component', function () {
                 center={position}
             >
                 <FeatureGroup>
-                    <DraftControl />
+                    <DraftControl draw={{}}/>
                     <Marker position={position} />
                 </FeatureGroup>
             </MapContainer>

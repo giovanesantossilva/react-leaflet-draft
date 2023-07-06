@@ -1,6 +1,6 @@
 {
     "name": "react-leaflet-draft",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "private": false,
     "description": "A modern study React component of leaflet draw for react-leaflet",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",
@@ -9,6 +9,7 @@
     "types": "src/Draft/index.d.ts",
     "scripts": {
         "test": "jest",
+        "coverage": "jest --coverage",
         "size": "du -hs dist/",
         "clean": "rm -rf dist",
         "start": "webpack serve --progress",
