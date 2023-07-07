@@ -1,6 +1,6 @@
 {
     "name": "react-leaflet-draft",
-    "version": "1.2.1",
+    "version": "2.0.0",
     "private": false,
     "description": "A modern study React component of leaflet draw for react-leaflet",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",
@@ -41,35 +41,38 @@
         "editor"
     ],
     "peerDependencies": {
-        "leaflet": "^1.6.0",
+        "leaflet": "^1.7.0",
         "leaflet-draw": "^1.0.0",
-        "react-leaflet": "^3.0.0"
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-leaflet": "^4.0.0"
     },
     "dependencies": {
-        "@react-leaflet/core": "^1.1.1",
-        "leaflet": "^1.7.1",
+        "@react-leaflet/core": "^2.1.0",
+        "leaflet": "^1.9.4",
         "leaflet-draw": "^1.0.4",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-leaflet": "^3.2.5"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-leaflet": "^4.2.1"
     },
     "devDependencies": {
-        "@babel/cli": "^7.17.0",
-        "@babel/core": "^7.17.2",
-        "@babel/preset-env": "^7.16.11",
-        "@babel/preset-react": "^7.16.7",
-        "@testing-library/jest-dom": "^5.16.2",
-        "@testing-library/react": "^12.1.2",
-        "babel-jest": "^27.5.1",
-        "babel-loader": "^8.2.3",
-        "css-loader": "^6.6.0",
-        "html-webpack-plugin": "^5.5.0",
-        "jest": "^27.5.1",
+        "@babel/cli": "^7.22.6",
+        "@babel/core": "^7.22.8",
+        "@babel/preset-env": "^7.22.7",
+        "@babel/preset-react": "^7.22.5",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^14.0.0",
+        "babel-jest": "^29.6.1",
+        "babel-loader": "^9.1.2",
+        "css-loader": "^6.8.1",
+        "html-webpack-plugin": "^5.5.3",
+        "jest": "^29.6.1",
         "jest-dom": "^4.0.0",
-        "style-loader": "^3.3.1",
-        "terser": "^5.10.0",
-        "webpack": "^5.68.0",
-        "webpack-cli": "^4.9.2",
-        "webpack-dev-server": "^4.7.4"
+        "jest-environment-jsdom": "^29.6.1",
+        "style-loader": "^3.3.3",
+        "terser": "^5.14.2",
+        "webpack": "^5.88.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
     }
 }

@@ -6,6 +6,7 @@ node_modules/
 # Build
 dist/
 build/
+coverage/
 # Enviroment
 .env
 .env.*

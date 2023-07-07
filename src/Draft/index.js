@@ -1,5 +1,5 @@
 import L from "leaflet";
-import { memo, useEffect, useState, useCallback } from "react";
+import { memo, useEffect, useCallback } from "react";
 import { useLeafletContext, createControlComponent } from '@react-leaflet/core';
 
 import "leaflet-draw";
@@ -15,12 +15,10 @@ export const DraftControl = memo(createControlComponent(function(props) {
         const container = context.layerContainer || context.map;
         const eventLayers = event.layer;
         const containerLayers = container.getLayers();
-
         if((containerLayers.length + 1) > limitLayers) {
             onCreated({ error: { layer: 'limit reached' }});
             return;
         }
-
         container.addLayer(eventLayers);
         onCreated && onCreated(event);
     }, []);

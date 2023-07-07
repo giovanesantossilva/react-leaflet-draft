@@ -2,7 +2,7 @@ import "leaflet/dist/leaflet.css";
 
 import React from "react";
 import { Icon } from 'leaflet';
-import { render  } from "react-dom";
+import { createRoot } from "react-dom/client";
 import { MapContainer, TileLayer, Marker, FeatureGroup } from "react-leaflet";
 
 import { DraftControl } from "../src/Draft";
@@ -39,6 +39,5 @@ const App = () => {
     )
 }
 
-render(
-    <App/>
-, document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
+root.render(<App/>);

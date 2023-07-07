@@ -10,7 +10,7 @@ module.exports = {
         "**/?(*.)+(spec|test).[tj]s?(x)"
     ],
     transformIgnorePatterns: [
-        "/node_modules/",
+        '/node_modules\/(?!@react-leaflet|react-leaflet)(.*)'
     ],
     moduleNameMapper: {
         "\\.css$": '<rootDir>/test/css.js'

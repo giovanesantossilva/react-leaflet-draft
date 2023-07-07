@@ -1,5 +1,7 @@
 import * as React from "react";
 
+type PositionProps = 'topleft' | 'topright' | 'bottomleft' | 'bottomright';
+
 type EditProps = {
     edit?: boolean,
     remove?: boolean
@@ -38,9 +40,9 @@ interface LeafletDrawListeners {
 }
 
 export interface DraftControlProps extends LeafletDrawListeners {
-    position?: string,
+    position?: PositionProps,
     edit?: EditProps,
-    draw: DrawProps,
+    draw?: DrawProps,
     limitLayers?: number,
     translate?: TranslateProps
 }

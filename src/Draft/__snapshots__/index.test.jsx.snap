@@ -3,7 +3,7 @@
 exports[`MarkerMuster Component should render and unmount component 1`] = `
 <div>
   <div
-    class="leaflet-container leaflet-grab leaflet-touch-drag"
+    class="leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
     style="position: relative;"
     tabindex="0"
   >
@@ -15,10 +15,10 @@ exports[`MarkerMuster Component should render and unmount component 1`] = `
         class="leaflet-pane leaflet-tile-pane"
       />
       <div
-        class="leaflet-pane leaflet-shadow-pane"
+        class="leaflet-pane leaflet-overlay-pane"
       />
       <div
-        class="leaflet-pane leaflet-overlay-pane"
+        class="leaflet-pane leaflet-shadow-pane"
       />
       <div
         class="leaflet-pane leaflet-marker-pane"
@@ -40,22 +40,32 @@ exports[`MarkerMuster Component should render and unmount component 1`] = `
           class="leaflet-control-zoom leaflet-bar leaflet-control"
         >
           <a
+            aria-disabled="false"
             aria-label="Zoom in"
             class="leaflet-control-zoom-in"
             href="#"
             role="button"
             title="Zoom in"
           >
-            +
+            <span
+              aria-hidden="true"
+            >
+              +
+            </span>
           </a>
           <a
+            aria-disabled="false"
             aria-label="Zoom out"
             class="leaflet-control-zoom-out"
             href="#"
             role="button"
             title="Zoom out"
           >
-            −
+            <span
+              aria-hidden="true"
+            >
+              −
+            </span>
           </a>
         </div>
         <div
@@ -143,7 +153,996 @@ exports[`MarkerMuster Component should render and unmount component 1`] = `
         >
           <a
             href="https://leafletjs.com"
-            title="A JS library for interactive maps"
+            title="A JavaScript library for interactive maps"
+          >
+            Leaflet
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MarkerMuster Component should render and unmount component with draw props 1`] = `
+<div>
+  <div
+    class="leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+    style="position: relative;"
+    tabindex="0"
+  >
+    <div
+      class="leaflet-pane leaflet-map-pane"
+      style="left: 0px; top: 0px;"
+    >
+      <div
+        class="leaflet-pane leaflet-tile-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-overlay-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-shadow-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-marker-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-tooltip-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-popup-pane"
+      />
+    </div>
+    <div
+      class="leaflet-control-container"
+    >
+      <div
+        class="leaflet-top leaflet-left"
+      >
+        <div
+          class="leaflet-control-zoom leaflet-bar leaflet-control"
+        >
+          <a
+            aria-disabled="false"
+            aria-label="Zoom in"
+            class="leaflet-control-zoom-in"
+            href="#"
+            role="button"
+            title="Zoom in"
+          >
+            <span
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </a>
+          <a
+            aria-disabled="false"
+            aria-label="Zoom out"
+            class="leaflet-control-zoom-out"
+            href="#"
+            role="button"
+            title="Zoom out"
+          >
+            <span
+              aria-hidden="true"
+            >
+              −
+            </span>
+          </a>
+        </div>
+        <div
+          class="leaflet-draw leaflet-control"
+        >
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar leaflet-draw-toolbar-top"
+            >
+              <a
+                class="leaflet-draw-draw-polyline"
+                href="#"
+                title="Draw a polyline"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Draw a polyline
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-draw-polygon"
+                href="#"
+                title="Draw a polygon"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Draw a polygon
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-draw-rectangle"
+                href="#"
+                title="Draw a rectangle"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Draw a rectangle
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-draw-circle"
+                href="#"
+                title="Draw a circle"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Draw a circle
+                </span>
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar"
+            >
+              <a
+                class="leaflet-draw-edit-edit"
+                href="#"
+                title="Edit layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Edit layers
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-edit-remove"
+                href="#"
+                title="Delete layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Delete layers
+                </span>
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="leaflet-top leaflet-right"
+      />
+      <div
+        class="leaflet-bottom leaflet-left"
+      />
+      <div
+        class="leaflet-bottom leaflet-right"
+      >
+        <div
+          class="leaflet-control-attribution leaflet-control"
+        >
+          <a
+            href="https://leafletjs.com"
+            title="A JavaScript library for interactive maps"
+          >
+            Leaflet
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MarkerMuster Component should render and unmount component with edit props 1`] = `
+<div>
+  <div
+    class="leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+    style="position: relative;"
+    tabindex="0"
+  >
+    <div
+      class="leaflet-pane leaflet-map-pane"
+      style="left: 0px; top: 0px;"
+    >
+      <div
+        class="leaflet-pane leaflet-tile-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-overlay-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-shadow-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-marker-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-tooltip-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-popup-pane"
+      />
+    </div>
+    <div
+      class="leaflet-control-container"
+    >
+      <div
+        class="leaflet-top leaflet-left"
+      >
+        <div
+          class="leaflet-control-zoom leaflet-bar leaflet-control"
+        >
+          <a
+            aria-disabled="false"
+            aria-label="Zoom in"
+            class="leaflet-control-zoom-in"
+            href="#"
+            role="button"
+            title="Zoom in"
+          >
+            <span
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </a>
+          <a
+            aria-disabled="false"
+            aria-label="Zoom out"
+            class="leaflet-control-zoom-out"
+            href="#"
+            role="button"
+            title="Zoom out"
+          >
+            <span
+              aria-hidden="true"
+            >
+              −
+            </span>
+          </a>
+        </div>
+        <div
+          class="leaflet-draw leaflet-control"
+        >
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar leaflet-draw-toolbar-top"
+            >
+              <a
+                class="leaflet-draw-draw-polyline"
+                href="#"
+                title="Draw a polyline"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Draw a polyline
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-draw-polygon"
+                href="#"
+                title="Draw a polygon"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Draw a polygon
+                </span>
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar"
+            >
+              <a
+                class="leaflet-draw-edit-edit"
+                href="#"
+                title="Edit layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Edit layers
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-edit-remove"
+                href="#"
+                title="Delete layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Delete layers
+                </span>
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="leaflet-top leaflet-right"
+      />
+      <div
+        class="leaflet-bottom leaflet-left"
+      />
+      <div
+        class="leaflet-bottom leaflet-right"
+      >
+        <div
+          class="leaflet-control-attribution leaflet-control"
+        >
+          <a
+            href="https://leafletjs.com"
+            title="A JavaScript library for interactive maps"
+          >
+            Leaflet
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MarkerMuster Component should render and unmount component with limitLayer props 1`] = `
+<div>
+  <div
+    class="leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+    style="position: relative;"
+    tabindex="0"
+  >
+    <div
+      class="leaflet-pane leaflet-map-pane"
+      style="left: 0px; top: 0px;"
+    >
+      <div
+        class="leaflet-pane leaflet-tile-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-overlay-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-shadow-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-marker-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-tooltip-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-popup-pane"
+      />
+    </div>
+    <div
+      class="leaflet-control-container"
+    >
+      <div
+        class="leaflet-top leaflet-left"
+      >
+        <div
+          class="leaflet-control-zoom leaflet-bar leaflet-control"
+        >
+          <a
+            aria-disabled="false"
+            aria-label="Zoom in"
+            class="leaflet-control-zoom-in"
+            href="#"
+            role="button"
+            title="Zoom in"
+          >
+            <span
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </a>
+          <a
+            aria-disabled="false"
+            aria-label="Zoom out"
+            class="leaflet-control-zoom-out"
+            href="#"
+            role="button"
+            title="Zoom out"
+          >
+            <span
+              aria-hidden="true"
+            >
+              −
+            </span>
+          </a>
+        </div>
+        <div
+          class="leaflet-draw leaflet-control"
+        >
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar leaflet-draw-toolbar-top"
+            >
+              <a
+                class="leaflet-draw-draw-polyline"
+                href="#"
+              >
+                <span
+                  class="sr-only"
+                />
+              </a>
+              <a
+                class="leaflet-draw-draw-polygon"
+                href="#"
+              >
+                <span
+                  class="sr-only"
+                />
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar"
+            >
+              <a
+                class="leaflet-draw-edit-edit"
+                href="#"
+                title="Edit layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Edit layers
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-edit-remove"
+                href="#"
+                title="Delete layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Delete layers
+                </span>
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="leaflet-top leaflet-right"
+      />
+      <div
+        class="leaflet-bottom leaflet-left"
+      />
+      <div
+        class="leaflet-bottom leaflet-right"
+      >
+        <div
+          class="leaflet-control-attribution leaflet-control"
+        >
+          <a
+            href="https://leafletjs.com"
+            title="A JavaScript library for interactive maps"
+          >
+            Leaflet
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MarkerMuster Component should render and unmount component with listener 1`] = `
+<div>
+  <div
+    class="leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+    style="position: relative;"
+    tabindex="0"
+  >
+    <div
+      class="leaflet-pane leaflet-map-pane"
+      style="left: 0px; top: 0px;"
+    >
+      <div
+        class="leaflet-pane leaflet-tile-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-overlay-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-shadow-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-marker-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-tooltip-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-popup-pane"
+      />
+    </div>
+    <div
+      class="leaflet-control-container"
+    >
+      <div
+        class="leaflet-top leaflet-left"
+      >
+        <div
+          class="leaflet-control-zoom leaflet-bar leaflet-control"
+        >
+          <a
+            aria-disabled="false"
+            aria-label="Zoom in"
+            class="leaflet-control-zoom-in"
+            href="#"
+            role="button"
+            title="Zoom in"
+          >
+            <span
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </a>
+          <a
+            aria-disabled="false"
+            aria-label="Zoom out"
+            class="leaflet-control-zoom-out"
+            href="#"
+            role="button"
+            title="Zoom out"
+          >
+            <span
+              aria-hidden="true"
+            >
+              −
+            </span>
+          </a>
+        </div>
+        <div
+          class="leaflet-draw leaflet-control"
+        >
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar leaflet-draw-toolbar-top"
+            >
+              <a
+                class="leaflet-draw-draw-polyline"
+                href="#"
+              >
+                <span
+                  class="sr-only"
+                />
+              </a>
+              <a
+                class="leaflet-draw-draw-polygon"
+                href="#"
+              >
+                <span
+                  class="sr-only"
+                />
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar"
+            >
+              <a
+                class="leaflet-draw-edit-edit"
+                href="#"
+                title="Edit layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Edit layers
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-edit-remove"
+                href="#"
+                title="Delete layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Delete layers
+                </span>
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="leaflet-top leaflet-right"
+      />
+      <div
+        class="leaflet-bottom leaflet-left"
+      />
+      <div
+        class="leaflet-bottom leaflet-right"
+      >
+        <div
+          class="leaflet-control-attribution leaflet-control"
+        >
+          <a
+            href="https://leafletjs.com"
+            title="A JavaScript library for interactive maps"
+          >
+            Leaflet
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MarkerMuster Component should render and unmount component with position props 1`] = `
+<div>
+  <div
+    class="leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+    style="position: relative;"
+    tabindex="0"
+  >
+    <div
+      class="leaflet-pane leaflet-map-pane"
+      style="left: 0px; top: 0px;"
+    >
+      <div
+        class="leaflet-pane leaflet-tile-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-overlay-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-shadow-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-marker-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-tooltip-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-popup-pane"
+      />
+    </div>
+    <div
+      class="leaflet-control-container"
+    >
+      <div
+        class="leaflet-top leaflet-left"
+      >
+        <div
+          class="leaflet-control-zoom leaflet-bar leaflet-control"
+        >
+          <a
+            aria-disabled="false"
+            aria-label="Zoom in"
+            class="leaflet-control-zoom-in"
+            href="#"
+            role="button"
+            title="Zoom in"
+          >
+            <span
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </a>
+          <a
+            aria-disabled="false"
+            aria-label="Zoom out"
+            class="leaflet-control-zoom-out"
+            href="#"
+            role="button"
+            title="Zoom out"
+          >
+            <span
+              aria-hidden="true"
+            >
+              −
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="leaflet-top leaflet-right"
+      >
+        <div
+          class="leaflet-draw leaflet-control"
+        >
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar leaflet-draw-toolbar-top"
+            >
+              <a
+                class="leaflet-draw-draw-polyline"
+                href="#"
+                title="Draw a polyline"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Draw a polyline
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-draw-polygon"
+                href="#"
+                title="Draw a polygon"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Draw a polygon
+                </span>
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar"
+            >
+              <a
+                class="leaflet-draw-edit-edit"
+                href="#"
+                title="Edit layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Edit layers
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-edit-remove"
+                href="#"
+                title="Delete layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Delete layers
+                </span>
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="leaflet-bottom leaflet-left"
+      />
+      <div
+        class="leaflet-bottom leaflet-right"
+      >
+        <div
+          class="leaflet-control-attribution leaflet-control"
+        >
+          <a
+            href="https://leafletjs.com"
+            title="A JavaScript library for interactive maps"
+          >
+            Leaflet
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MarkerMuster Component should render and unmount component with translate props 1`] = `
+<div>
+  <div
+    class="leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+    style="position: relative;"
+    tabindex="0"
+  >
+    <div
+      class="leaflet-pane leaflet-map-pane"
+      style="left: 0px; top: 0px;"
+    >
+      <div
+        class="leaflet-pane leaflet-tile-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-overlay-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-shadow-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-marker-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-tooltip-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-popup-pane"
+      />
+    </div>
+    <div
+      class="leaflet-control-container"
+    >
+      <div
+        class="leaflet-top leaflet-left"
+      >
+        <div
+          class="leaflet-control-zoom leaflet-bar leaflet-control"
+        >
+          <a
+            aria-disabled="false"
+            aria-label="Zoom in"
+            class="leaflet-control-zoom-in"
+            href="#"
+            role="button"
+            title="Zoom in"
+          >
+            <span
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </a>
+          <a
+            aria-disabled="false"
+            aria-label="Zoom out"
+            class="leaflet-control-zoom-out"
+            href="#"
+            role="button"
+            title="Zoom out"
+          >
+            <span
+              aria-hidden="true"
+            >
+              −
+            </span>
+          </a>
+        </div>
+        <div
+          class="leaflet-draw leaflet-control"
+        >
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar leaflet-draw-toolbar-top"
+            >
+              <a
+                class="leaflet-draw-draw-polyline"
+                href="#"
+              >
+                <span
+                  class="sr-only"
+                />
+              </a>
+              <a
+                class="leaflet-draw-draw-polygon"
+                href="#"
+              >
+                <span
+                  class="sr-only"
+                />
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+          <div
+            class="leaflet-draw-section"
+          >
+            <div
+              class="leaflet-draw-toolbar leaflet-bar"
+            >
+              <a
+                class="leaflet-draw-edit-edit"
+                href="#"
+                title="Edit layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Edit layers
+                </span>
+              </a>
+              <a
+                class="leaflet-draw-edit-remove"
+                href="#"
+                title="Delete layers"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Delete layers
+                </span>
+              </a>
+            </div>
+            <ul
+              class="leaflet-draw-actions"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="leaflet-top leaflet-right"
+      />
+      <div
+        class="leaflet-bottom leaflet-left"
+      />
+      <div
+        class="leaflet-bottom leaflet-right"
+      >
+        <div
+          class="leaflet-control-attribution leaflet-control"
+        >
+          <a
+            href="https://leafletjs.com"
+            title="A JavaScript library for interactive maps"
           >
             Leaflet
           </a>
