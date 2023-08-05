@@ -3,7 +3,7 @@ import * as React from "react";
 type PositionProps = 'topleft' | 'topright' | 'bottomleft' | 'bottomright';
 
 type EditProps = {
-    edit?: boolean,
+    edit?: object,
     remove?: boolean
 }
 

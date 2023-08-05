@@ -2,7 +2,7 @@ import L from "leaflet";
 
 function createEditDefault() {
     return {
-        edit: true,
+        edit: {},
         remove: true
     }
 }

@@ -1,6 +1,11 @@
 # React Leaflet Draft
 
 > A modern study React component of leaflet draw for react-leaflet
+> 
+![Version](https://img.shields.io/github/package-json/v/giovanesantossilva/react-leaflet-draft)
+![Project Size](https://img.shields.io/bundlephobia/min/giovanesantossilva/react-leaflet-draft@latest)
+![Dependencies](https://img.shields.io/github/languages/top/giovanesantossilva/react-leaflet-draft)
+![Licence](https://img.shields.io/github/license/giovanesantossilva/react-leaflet-draft)
 
 React component of [leaflet-draw](https://github.com/Leaflet/Leaflet.draw)
 for [react-leaflet](https://github.com/PaulLeCam/react-leaflet)
@@ -31,8 +36,16 @@ yarn add leaflet leaflet-draw react-leaflet
 
 ### Installation
 
+#### For React 17 with React Leaflet 3
+
 ```shell
-yarn add react-leaflet-draft
+yarn add react-leaflet-muster@ˆ1.2.1
+```
+
+#### For React 18 with React Leaflet 4
+
+```shell
+yarn add react-leaflet-muster@latest
 ```
 
 ### Usage
