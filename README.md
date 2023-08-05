@@ -39,13 +39,13 @@ yarn add leaflet leaflet-draw react-leaflet
 #### For React 17 with React Leaflet 3
 
 ```shell
-yarn add react-leaflet-muster@ˆ1.2.1
+yarn add react-leaflet-draft@ˆ1.2.1
 ```
 
 #### For React 18 with React Leaflet 4
 
 ```shell
-yarn add react-leaflet-muster@latest
+yarn add react-leaflet-draft@latest
 ```
 
 ### Usage
@@ -61,14 +61,16 @@ yarn add react-leaflet-muster@latest
 #### Full Example
 
 ```jsx
+import "leaflet/dist/leaflet.css";
+
 import { DraftControl } from "react-leaflet-draft";
-import { MapContainer, TileLayer, Marker, FeatureGroup } from "react-leaflet";
+import { MapContainer, TileLayer, FeatureGroup } from "react-leaflet";
 
 function Map() {
     return(
         <MapContainer
             zoom={14}
-            center={position}
+            center={[-22.2108112, -49.6771926]}
         >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -94,7 +96,7 @@ You can see the properties in [Leaflet-draw Documentation](http://leaflet.github
         rectangle: true
     }}
     edit={{
-        edit: false
+        edit: {}
     }}
     translate={{
         toolbar: {
